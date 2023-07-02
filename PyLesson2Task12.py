@@ -1,3 +1,4 @@
+# Задача 12: 
 # Петя и Катя – брат и сестра. Петя – студент, а Катя – школьница.
 # Петя помогает Кате по математике. Он задумывает два натуральных
 # числа X и Y (X,Y≤1000), а Катя должна их отгадать. Для этого 
@@ -15,10 +16,9 @@ def intNumEnter(msg=''):
             run_again = False if num > 0 else True
     return num
 # random.seed(a=None, version=2)
-coins_tail = 0
-coins_head = 0
-coins_amount = 0
-coins_amount = intNumEnter('Please enter coins amount: ')
+num_mul = intNumEnter('Please enter multuply of two numbers: ')
+num_sum = intNumEnter('Please enter sum of two numbers: ')
+
 for i in range(1, coins_amount):
     coin = int(random.randrange(0,19)/10)
     print(coin, end=' ' )
@@ -26,6 +26,6 @@ for i in range(1, coins_amount):
     if coin == 1: coins_head+=1
 print()
 if coins_head<coins_tail: 
-    print("Coins head are to turn, their amount is: ", coins_head, "pcs.")
+    print("Coins head are to turn, their amount is: ", 0, "pcs.")
 else: 
-    print("Coins tail are to turn, their amount is: ", coins_tail, "pcs.")
+    print("Coins tail are to turn, their amount is: ", 1, "pcs.")

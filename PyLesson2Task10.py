@@ -10,9 +10,7 @@ def intNumEnter(msg=''):
             run_again = False if num > 0 else True
     return num
 # random.seed(a=None, version=2)
-coins_tail = 0
-coins_head = 0
-coins_amount = 0
+coins_tail, coins_head, coins_amount = 0, 0, 0
 coins_amount = intNumEnter('Please enter coins amount: ')
 for i in range(1, coins_amount):
     coin = int(random.randrange(0,19)/10)
