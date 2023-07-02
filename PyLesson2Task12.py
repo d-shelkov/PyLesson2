@@ -18,14 +18,19 @@ def intNumEnter(msg=''):
 # random.seed(a=None, version=2)
 num_mul = intNumEnter('Please enter multuply of two numbers: ')
 num_sum = intNumEnter('Please enter sum of two numbers: ')
+i, j, res = 0, 0, 0
+NotFound = True
+while i <= num_mul and NotFound:
+    j = 1
+    i += 1
+    while j <= num_sum and NotFound:
+        j += 1
+        if (i * j == num_mul) and (i + j == num_sum):
+            NotFound = False
+            # print('i = ', i, '  j = ', j) # debug print
+if NotFound:
+    print('Source numbers combination for multuplication: ', num_mul,', and sum: ', num_sum,' -  not found.')
+else:
+    print('Source numbers combination for multuplication: ', num_mul,', and sum: ', num_sum,' -  found!')
+    print('Tsese numbers are^ i = ', i, '  j = ', j,'.')
 
-for i in range(1, coins_amount):
-    coin = int(random.randrange(0,19)/10)
-    print(coin, end=' ' )
-    if coin == 0: coins_tail+=1
-    if coin == 1: coins_head+=1
-print()
-if coins_head<coins_tail: 
-    print("Coins head are to turn, their amount is: ", 0, "pcs.")
-else: 
-    print("Coins tail are to turn, their amount is: ", 1, "pcs.")

@@ -14,7 +14,7 @@ coins_tail, coins_head, coins_amount = 0, 0, 0
 coins_amount = intNumEnter('Please enter coins amount: ')
 for i in range(1, coins_amount):
     coin = int(random.randrange(0,19)/10)
-    print(coin, end=' ' )
+    print(coin, end=' ')
     if coin == 0: coins_tail+=1
     if coin == 1: coins_head+=1
 print()
